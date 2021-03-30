@@ -215,3 +215,137 @@ quarter_of(3)
 quarter_of(5)
 quarter_of(7)
 quarter_of(10)
+
+
+# Exercise 7
+
+=begin
+
+Issue
+
+Looks like some hoodlum plumber and his brother has been running around and damaging your stages again.
+
+The pipes connecting your level's stages together need to be fixed before you receive any more complaints. Each pipe should be connecting, since the levels ascend, you can assume every number in the sequence after the first index will be greater than the previous and that there will be no duplicates.
+Task
+
+Given the a list of numbers, return the list so that the values increment by 1 for each index up to the maximum value.
+Example
+
+Input: 1,3,5,6,7,8
+
+Output: 1,2,3,4,5,6,7,8
+
+
+=end
+
+print "\n\n"
+print "Lario and Muigig Pipe Problem"
+print "\n"
+
+def pipe_fix(nums)
+
+	fst_num = nums[0]
+	lst_num = nums[-1]
+	result = (fst_num..lst_num).to_a
+	
+	puts result
+	return result
+	end
+
+pipe_fix([1,2,3,5,6,8,9])
+
+
+
+# Exercise 8
+
+=begin
+
+Given an array of integers your solution should find the smallest integer.
+
+For example:
+
+    Given [34, 15, 88, 2] your solution will return 2
+    Given [34, -345, -1, 100] your solution will return -345
+
+You can assume, for the purpose of this kata, that the supplied array will not be empty.
+
+=end
+
+print "\n\n"
+print "Find the smallest integer in the array"
+print "\n"
+
+def find_smallest_int(arr)
+	smallest = arr[0]
+	i = 0
+	arr.each do |i| 
+		if i < smallest
+			smallest = i
+		end
+	end
+	puts smallest
+	return smallest	
+	end
+
+find_smallest_int([78,56,232,12,8])
+find_smallest_int([78,56,-2,12,8])
+find_smallest_int([-78,56,-2,12,8])
+
+
+# Exercise 9
+
+=begin
+
+You need to double the integer and return it.
+
+=end
+
+print "\n\n"
+print "You Can't Code Under Pressure #1"
+print "\n"
+
+def double_integer(i)
+	puts i * 2
+	return i * 2
+
+	end
+
+double_integer(6)
+
+
+# Exercise 10
+
+=begin
+
+Create a function that gives a personalized greeting. This function takes two parameters: name and owner.
+
+Use conditionals to return the proper message:
+case 	return
+name equals owner 	'Hello boss'
+otherwise 	'Hello guest'
+
+=end
+
+print "\n\n"
+print "Personalised greeting"
+print "\n"
+
+def greet(name, owner)
+	greeting = ""
+	if name == owner
+		greeting = "Hello boss"
+	elsif name != owner
+		greeting = "Hello guest"
+	else
+		greeting = "Invalid Input"
+	end
+	puts greeting
+	return greeting 
+		
+
+end
+
+greet("Daniel","Daniel")
+greet("Daniel","Jonh")
+
+
