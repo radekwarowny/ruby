@@ -180,4 +180,38 @@ end
 
 human_years_cat_years_dog_years(10)
 
+# Exercise 6
 
+=begin
+Given a month as an integer from 1 to 12, return to which quarter of the year it belongs as an integer number.
+
+For example: month 2 (February), is part of the first quarter; month 6 (June), is part of the second quarter; and month 11 (November), is part of the fourth quarter.
+
+=end
+
+print "\n\n"
+print "Quarter of the year"
+print "\n"
+
+
+def quarter_of(month)
+
+	quarter = 0
+	if month <= 3
+		quarter = 1
+	elsif month > 3 and month <= 6
+		quarter = 2
+	elsif month > 6 and month <= 9
+		quarter = 3
+	else
+		quarter = 4
+	end
+
+	puts quarter
+	return quarter
+end
+
+quarter_of(3)
+quarter_of(5)
+quarter_of(7)
+quarter_of(10)
