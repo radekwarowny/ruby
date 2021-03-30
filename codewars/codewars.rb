@@ -94,8 +94,27 @@ Example:
 	
 =end
 
-def digitize(n)
+print "\n\n"
+print "Convert number to reversed array of digits"
+print "\n"
 
+def digitize(n)
+	str_n = n.to_s
+	arr = []
+	i = 0
+	loop do
+		if i < str_n.length
+			arr.push(str_n[i])
+			i += 1
+		else
+			break
+		end
+	end
+	print arr
+	result = arr.reverse()
+	print(result)
 end
+
+digitize(348597)
 
 
